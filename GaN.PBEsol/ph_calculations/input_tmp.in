@@ -1,0 +1,23 @@
+&inputph
+  prefix = 'gan',
+  outdir='/home/sachs/software/q-e/tempdir/'
+  fildyn = 'gan.dynG',
+  alpha_mix(1)=0.3
+
+  tr2_ph = 1.0d-13,
+  epsil = .true.,
+
+
+  asr = .true.,
+
+
+  amass(1) = 69.723,
+  amass(2) = 14.007,
+
+
+  ldisp = .false.
+/
+0.0 0.0 0.0
+
+
+
