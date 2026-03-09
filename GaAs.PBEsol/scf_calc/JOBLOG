@@ -1,0 +1,5 @@
+submit directory: /home/sachs/freq_calc/raman_GGA__PBEsol_calc/GaAs_test/scf_calc
+job ID: 73631
+node: mendelevium01
+number of CPUs: 256
+scratch directory: /local/scratch/sachs/73631

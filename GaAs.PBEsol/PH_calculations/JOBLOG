@@ -1,0 +1,5 @@
+submit directory: /home/sachs/freq_calc/raman_GGA__PBEsol_calc/GaAs_test/PH_calculations
+job ID: 73632
+node: mendelevium01
+number of CPUs: 256
+scratch directory: /local/scratch/sachs/73632
