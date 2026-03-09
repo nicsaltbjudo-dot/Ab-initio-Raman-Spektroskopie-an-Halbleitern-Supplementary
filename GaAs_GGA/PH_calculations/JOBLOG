@@ -1,0 +1,5 @@
+submit directory: /home/sachs/freq_calc/raman_GGA_calc/GaAs/PH_calculations
+job ID: 74320
+node: chromium05
+number of CPUs: 24
+scratch directory: /local/scratch/sachs/74320

@@ -1,0 +1,18 @@
+&inputph
+  prefix = 'gaasPBE',
+  outdir='/home/nico-sachs/source/q-e/tempdir/'
+  fildyn = 'gaasPBE.dynG',
+  tr2_ph = 1.0d-14,
+  epsil = .true.,
+  lraman =.false.,
+  asr = .true.,
+  amass(1) = 69.723,
+  amass(2) = 74.921,
+
+
+  ldisp = .false.
+/
+0.0 0.0 0.0
+
+
+

@@ -1,0 +1,35 @@
+ &control
+    calculation='scf'
+    restart_mode='from_scratch',
+    pseudo_dir = '/home/nico-sachs/source/q-e/Pseudofolder/nc-sr-04_pbe_standard_upf',
+    prefix='gaasPBE',
+    outdir='/home/nico-sachs/source/q-e/tempdir/'
+    tprnfor = .true.
+    tstress = .true.
+    verbosity   = 'high'
+ /    
+ &system
+  ibrav = 2
+  celldm(1) = 10.8340382112  
+  nat = 2
+  ntyp = 2
+  ecutwfc = 100
+  ecutrho = 600
+  occupations = 'fixed'
+  nbnd = 16
+
+/
+ &electrons
+    diagonalization='cg'
+    mixing_beta = 0.7
+ /
+
+ATOMIC_SPECIES
+  Ga   69.72300  Ga.upf
+  As   74.92100  As.upf
+ATOMIC_POSITIONS crystal
+Ga 0.00 0.00 0.00
+As 0.25 0.25 0.25
+
+K_POINTS automatic
+20 20 20 1 1 1
