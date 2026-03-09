@@ -1,0 +1,23 @@
+&inputph
+  prefix = 'inasPBEsol',
+  outdir='/home/sachs/software/q-e/tempdir/'
+  fildyn = 'inas.dynG',
+  
+
+  tr2_ph = 1.0d-14,
+  epsil = .true.,
+  
+  
+  asr = .true.,
+  
+  
+  amass(1) = 114.81800,
+  amass(2) = 74.92100,
+  
+  
+  ldisp = .false.
+/
+0.0 0.0 0.0              
+
+
+

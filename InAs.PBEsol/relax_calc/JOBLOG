@@ -1,0 +1,5 @@
+submit directory: /home/sachs/freq_calc/raman_GGA__PBEsol_calc/InAs201/relax_calc
+job ID: 74263
+node: chromium08
+number of CPUs: 24
+scratch directory: /local/scratch/sachs/74263
