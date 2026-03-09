@@ -1,0 +1,24 @@
+
+     Program Q2R v.7.5 starts on 18Feb2026 at 21:44:32 
+        Git branch: develop
+        Last git commit: 6243c3fdf97ec3933a6eab99c7ec4756663556e8
+        Last git commit date: Mon Nov 24 20:42:59 2025 +0000
+        Last git commit subject: Merge branch 'uniform_uv' into 'develop'
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+     473 MiB available memory on the printing compute node when the environment starts
+
+
+  file gan.dynG0     not found
+  reading grid info from input

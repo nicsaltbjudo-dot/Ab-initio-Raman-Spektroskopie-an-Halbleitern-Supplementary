@@ -1,0 +1,6 @@
+cp: preserving permissions for '/local/scratch/sachs/73124/JOBLOG': Operation not supported
+cp: preserving permissions for '/local/scratch/sachs/73124/gan.phG.in': Operation not supported
+cp: preserving permissions for '/local/scratch/sachs/73124/qe-pw.job': Operation not supported
+cp: preserving permissions for '/local/scratch/sachs/73124/slurm-73124.out': Operation not supported
+/var/lib/slurm-llnl/slurmd/job73124/slurm_script: line 44: ulimit: open files: cannot modify limit: Operation not permitted
+/var/lib/slurm-llnl/slurmd/job73124/slurm_script: line 45: ulimit: pipe size: cannot modify limit: Invalid argument

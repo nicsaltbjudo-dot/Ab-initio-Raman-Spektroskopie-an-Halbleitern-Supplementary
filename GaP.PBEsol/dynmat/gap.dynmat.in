@@ -1,0 +1,8 @@
+&input
+   fildyn='gap.dynG'
+   asr='crystal'
+   q(1)=0.0
+   q(2)=0.0
+   q(3)=1.0
+   filout='gap.mode'
+ /

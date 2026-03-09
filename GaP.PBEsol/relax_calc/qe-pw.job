@@ -1,0 +1,71 @@
+#!/bin/bash
+
+#SBATCH -J name
+#SBATCH --get-user-env
+#SBATCH --nodes=1
+#SBATCH --exclusive
+#SBATCH --partition=mendelevium,gadolinium,chromium,calcium
+#SBATCH --mail-type=end
+#SBATCH --export=ALL
+
+
+CORES=1
+
+# check at which node we did really end up
+node=$(hostname)
+
+if [[ $node == "calcium"* ]]; then  CORES=20;  fi
+if [[ $node == "sulfur"* ]]; then  CORES=16;  fi
+if [[ $node == "magnesium"* ]]; then  CORES=12;  fi
+if [[ $node == "chromium"* ]]; then  CORES=24;  fi
+if [[ $node == "cuda"* ]]; then  CORES=24;  fi
+if [[ $node == "gadolinium"* ]]; then  CORES=64;  fi
+if [[ $node == "mendelevium"* ]]; then  CORES=256;  fi
+
+
+# test if /local/scratch/$USER exists, create it if not
+[[ -d /local/scratch/$USER ]] || mkdir /local/scratch/$USER
+# create the scratch directory
+mkdir /local/scratch/$USER/$SLURM_JOB_ID
+SCRDIR=/local/scratch/$USER/$SLURM_JOB_ID
+
+# print job-specific information
+echo "submit directory: $SLURM_SUBMIT_DIR" > JOBLOG
+echo "job ID: $SLURM_JOB_ID" >> JOBLOG
+echo "node: $node" >> JOBLOG
+echo "number of CPUs: $CORES" >> JOBLOG
+echo "scratch directory: $SCRDIR" >> JOBLOG
+
+# copy from submit directory to scratch
+cp -p -r $SLURM_SUBMIT_DIR/* $SCRDIR/
+# go to scratch
+cd $SCRDIR
+
+ulimit -n unlimited
+ulimit -p unlimited
+
+# link QE paths
+# anpassen
+PW=~/software/q-e/build/bin/pw.x
+#PH=~/software/q-e/build/bin/ph.x
+#q2r=/home/sachs/sshfs/dyson/software/q-e/build/bin/q2r.x
+#matdyn=/home/sachs/sshfs/dyson/software/q-e/build/bin/matdyn.x
+
+
+# execute job
+# anpassen
+mpirun -np $CORES $PW < gap.relax.in  1> gap.relax.out 2> qe-pw_error.out
+#mpirun -np $CORES $PH < gaas.ph.in  1> gaas.ph.out 2> qe-ph_error.out
+#mpirun -np $CORES $q2r < run-q2r.inp  1> qe-q2r.out 2> qe-q2r_error.out
+#mpirun -np $CORES $matdyn < run-matdyn.inp  1> qe-matdyn2.out 2> qe-matdyn2_error.out
+
+
+# copy from scratch directory to submit directory
+cp -p -r $SCRDIR/* $SLURM_SUBMIT_DIR/
+# go to submit directory
+cd $SLURM_SUBMIT_DIR
+# remove scratch directory
+rm -rf $SCRDIR
+
+
+exit

@@ -1,0 +1,14 @@
+&input
+    asr='crystal', 
+    amass(1)=69.723,  ! Masse für Gallium
+    amass(2)=14.0067, ! Masse für Stickstoff
+    flfrc='gan.fc',   ! Die Datei mit den Kraftkonstanten aus q2r.x
+    flfrq='gan.freq',  ! Hier werden die Ergebnisse gespeichert
+    q_in_band_form=.true.,
+ /
+ 5                    ! Anzahl der Punkte im Pfad (z.B. Gamma-K-M-Gamma-A)
+ 0.00 0.00 0.00 40    ! Gamma
+ 0.33 0.33 0.00 20    ! K
+ 0.50 0.00 0.00 30    ! M
+ 0.00 0.00 0.00 30    ! Gamma
+ 0.00 0.00 0.50 1     ! A

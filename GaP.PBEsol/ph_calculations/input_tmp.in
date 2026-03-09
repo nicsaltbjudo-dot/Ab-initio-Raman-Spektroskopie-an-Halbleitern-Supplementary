@@ -1,0 +1,23 @@
+&inputph
+  prefix = 'gapPBEsol',
+  outdir='/home/sachs/software/q-e/tempdir/'
+  fildyn = 'gap.dynG',
+  alpha_mix(1)=0.3
+
+  tr2_ph = 1.0d-13,
+  epsil = .true.,
+  verbosity = 'high',
+
+  asr = .true.,
+
+
+  amass(1) = 30.97300,
+  amass(2) = 69.72300,
+
+
+  ldisp = .false.
+/
+0.0 0.0 0.0
+
+
+

@@ -1,0 +1,5 @@
+&input
+  fildyn='gan.dynG',
+  zasr='crystal',
+  flfrc='gan.fc'
+ /

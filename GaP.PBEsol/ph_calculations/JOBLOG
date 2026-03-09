@@ -1,0 +1,5 @@
+submit directory: /home/sachs/freq_calc/raman_GGA__PBEsol_calc/GaP201/ph_calculations
+job ID: 74271
+node: chromium05
+number of CPUs: 24
+scratch directory: /local/scratch/sachs/74271
