@@ -1,0 +1,5 @@
+submit directory: /home/sachs/freq_calc/raman_LDA_calc/GaAs/relax_calc
+job ID: 74310
+node: mendelevium01
+number of CPUs: 256
+scratch directory: /local/scratch/sachs/74310

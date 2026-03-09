@@ -1,0 +1,5 @@
+submit directory: /home/sachs/freq_calc/raman_LDA_calc/GaAs/PH_calculations
+job ID: 74312
+node: mendelevium01
+number of CPUs: 256
+scratch directory: /local/scratch/sachs/74312
